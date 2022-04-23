@@ -1,0 +1,37 @@
+from tkinter import *
+from tkinter import messagebox
+from timeit import default_timer as timer
+import random
+
+
+root = Tk()
+root.geometry("600x600")
+root.config(bg="#feda6a")
+
+window = Tk()
+window.geometry("550x500")
+window.withdraw()
+
+hs_file=open('highscore.txt', 'r+')
+x=0
+
+x1= Label(root,text="Typing Speed Test",bg="#feda6a",fg="#393f4d",font="Cambria 35")
+x1.place(x=115,y=50)
+
+b1=Button(root,text="Start",width=12,bg="White",font="Times 20")
+b1.place(x=200,y=140)
+
+hs_text=Label(root,text="HighScore",width=12,bg="#393f4d",fg="#feda6a",font="Times 30")
+hs_text.place(x=160,y=280)
+
+hs=int(hs_file.readline())
+hs_val = Label(root,text=str(hs)+" WPM",bg="#393f4d",fg="White",width=12,height=2)
+hs_val.place(x=250,y=350)
+
+root.mainloop()
+
+
+
+
+
+
